@@ -44,3 +44,30 @@ console.log('splice-array->', splArr1);
 let colors = ['red', 'green', 'blue'];
 let spliceRArr1 = colors.splice(2, 0, 'purple');
 console.log('splice-replace-array->', colors);
+
+// Assy Callback
+function f1() {
+  console.log('f1');
+}
+
+function f2() {
+  console.log('f2');
+}
+
+function f3() {
+  console.log('f3');
+}
+
+function main() {
+  console.log('main-one');
+
+  // setTimeout(f1, 0);
+  setTimeout(() => {
+    f1();
+  }, 10);
+
+  f2();
+  f3();
+}
+
+main();
