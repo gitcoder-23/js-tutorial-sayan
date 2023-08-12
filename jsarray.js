@@ -91,3 +91,98 @@ const findEven = findArr.find((data) => {
 console.log('findEven-->', findEven);
 const findOdd = findArr.find((data) => data % 2 === 1);
 console.log('findOdd-->', findOdd);
+
+// map()
+let newArr1 = [
+  {
+    fName: 'Nila',
+    class: '12',
+    age: '18',
+  },
+
+  {
+    fName: 'Mira',
+    class: '9',
+    age: '14',
+  },
+
+  {
+    fName: 'Rina',
+    class: '10',
+    age: '15',
+  },
+];
+
+console.log('newArr1->', newArr1[0].fName);
+newArr1.map((eData, index) => {
+  console.log('eData-->', eData.fName, index);
+});
+
+// filter
+newArr1.filter((fData, fIndex) => {
+  console.log('filter-->', fData, fIndex);
+});
+
+// Reduce
+const reduceArr = [1, 2, 3, 4];
+let reduceSum = reduceArr.reduce((prev, current) => {
+  return prev + current;
+});
+console.log('reduceSum->', reduceSum);
+
+const reduceRightArr = [1, 2, 3, 4];
+let reduceRightSum = reduceArr.reduceRight((prev, current) => {
+  return prev + current;
+});
+console.log('reduceRightSum->', reduceRightSum);
+
+// Every
+
+const evaryArr = [1, 2, 3, 4];
+
+let evrData = evaryArr.every((eArg) => {
+  // console.log('evaryArr->', evaryArr < 2);
+  return eArg < 2;
+});
+console.log('evrData->', evrData);
+
+// Sort
+let employees = [
+  { name: 'John', salary: 90000, hireDate: 'July 1, 2010' },
+  { name: 'David', salary: 75000, hireDate: 'August 15, 2009' },
+  { name: 'Ana', salary: 80000, hireDate: 'December 12, 2011' },
+];
+let mapData = employees.map((data) => {
+  return data.salary;
+});
+
+console.log('mapData->', mapData);
+
+let sortedSalIncrement = mapData.sort((a, b) => a - b);
+console.log('sortedSalIncrement->', sortedSalIncrement);
+
+let sortedSalDecrement = mapData.sort((a, b) => b - a);
+console.log('sortedSalDecrement->', sortedSalDecrement);
+
+let sortedSalDecrement1 = mapData.sort(function (a, b) {
+  return b - a;
+});
+console.log('sortedSalDecrement1->', sortedSalDecrement1);
+
+let scores = [9, 80, 10, 20, 5, 70];
+
+// nmber sort
+let numberSort = scores.sort();
+console.log('numberSort->', numberSort);
+
+let alphabet = ['zèbre', 'abeille', 'écureuil', 'chat'];
+let alphabetSort = alphabet.sort();
+console.log('alphabetSort->', alphabetSort);
+
+// Concat old
+const nArr1 = [1, 2, 3, 4];
+const nArr2 = [41, 42];
+const nArr3 = [50, 60];
+
+let concatArr = nArr1.concat(nArr2).concat(nArr3);
+console.log('concatArr->', concatArr);
