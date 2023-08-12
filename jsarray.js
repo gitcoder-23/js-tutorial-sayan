@@ -71,3 +71,23 @@ function main() {
 }
 
 main();
+
+// Index of
+const indexArr = [1, 2, 3, 41, 5];
+const inDexOfArr1 = indexArr.indexOf(3);
+console.log('inDexOfArr1->', inDexOfArr1);
+
+// Includes
+const includeArr = [1, 2, 3, 41, 20, 30];
+const includeArr1 = includeArr.includes(90);
+console.log('includeArr1-->', includeArr1);
+
+// Find
+const findArr = [1, 2, 3, 41, 20];
+const findEven = findArr.find((data) => {
+  console.log(data);
+  return data % 2 === 0;
+});
+console.log('findEven-->', findEven);
+const findOdd = findArr.find((data) => data % 2 === 1);
+console.log('findOdd-->', findOdd);
