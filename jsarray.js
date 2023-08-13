@@ -222,3 +222,9 @@ const reData = title.split('-');
 console.log('reData->', reData);
 let joinedData = reData.join('_');
 console.log('joinedData->', joinedData);
+
+// remove " "/ "-" add "_"
+const title1 = 'JavaScript-array-join-example';
+const replaceData = title1.replace(/[_-]/g, '_');
+const replaceAllData = title1.replaceAll('-', '_');
+console.log('replaceData-->', replaceData, replaceAllData);
