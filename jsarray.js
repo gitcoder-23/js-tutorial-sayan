@@ -228,3 +228,14 @@ const title1 = 'JavaScript-array-join-example';
 const replaceData = title1.replace(/[_-]/g, '_');
 const replaceAllData = title1.replaceAll('-', '_');
 console.log('replaceData-->', replaceData, replaceAllData);
+
+// Destructuring
+function desFun() {
+  let x = [1, 2, 3];
+  const y = [40, 45, 46];
+
+  return x, y;
+}
+
+let { x, y } = desFun();
+console.log('desData->', y);
