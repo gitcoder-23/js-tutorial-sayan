@@ -38,3 +38,22 @@ const newStr2 = 'are you';
 
 const joinedStr = `${newStr1} how ${newStr2}?`;
 console.log('joinedStr>', joinedStr);
+
+// Upper & Lower
+const newStr3 = 'Hi john';
+const upperData = newStr3.toUpperCase();
+console.log('upperData>', upperData);
+const lowerData = newStr3.toLowerCase();
+console.log('lowerData>', lowerData);
+
+// Number to string convert
+let numData = 40;
+console.log('numData>', typeof numData);
+let numToString = numData.toString();
+console.log('numToString>', typeof numToString, numToString);
+
+// String to number
+let strData = '100';
+console.log('strData>', typeof strData);
+let strToNum = parseInt(strData);
+console.log('strToNum>', typeof strToNum, strToNum);
