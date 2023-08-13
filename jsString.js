@@ -57,3 +57,5 @@ let strData = '100';
 console.log('strData>', typeof strData);
 let strToNum = parseInt(strData);
 console.log('strToNum>', typeof strToNum, strToNum);
+
+// operators
