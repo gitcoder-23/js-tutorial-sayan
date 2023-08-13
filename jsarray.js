@@ -189,6 +189,7 @@ console.log('concatArr->', concatArr);
 
 // flat
 const flArr = [1, 2, 3, [4, 5, 6]];
+
 // console.log('flArr->', flArr);
 let oneFlArr = flArr.flat();
 console.log('oneFlArr->', oneFlArr);
