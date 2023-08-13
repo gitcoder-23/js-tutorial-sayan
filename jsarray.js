@@ -204,3 +204,21 @@ const flArr2 = [1, 2, 3, [4, 5, 6, [40, 41, 42, [80, 90, 100, [500, 600]]]]];
 // console.log('flArr->', flArr);
 let oneInFlArr2 = flArr2.flat(Infinity);
 console.log('oneInFlArr2->', oneInFlArr2);
+
+// Array Join()
+const cssClasses = ['btn', 'btn-primary', 'btn-active'];
+
+const joinedArrData = cssClasses.join('_');
+console.log('joinedArrData->', joinedArrData, typeof joinedArrData);
+
+// name & join
+const nameArr = ['Sayan', 'Dutta'];
+const nameArrJoin = nameArr.join(' ');
+console.log('nameArrJoin->', nameArrJoin);
+
+// remove " "/ "-" add "_"
+const title = 'JavaScrip-array-join-example';
+const reData = title.split('-');
+console.log('reData->', reData);
+let joinedData = reData.join('_');
+console.log('joinedData->', joinedData);
