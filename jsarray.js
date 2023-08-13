@@ -186,3 +186,21 @@ const nArr3 = [50, 60];
 
 let concatArr = nArr1.concat(nArr2).concat(nArr3);
 console.log('concatArr->', concatArr);
+
+// flat
+const flArr = [1, 2, 3, [4, 5, 6]];
+// console.log('flArr->', flArr);
+let oneFlArr = flArr.flat();
+console.log('oneFlArr->', oneFlArr);
+
+/// Customize
+const flArr1 = [1, 2, 3, [4, 5, 6, [40, 41, 42]]];
+// console.log('flArr->', flArr);
+let oneFlArr1 = flArr1.flat(1);
+console.log('oneFlArr1->', oneFlArr1);
+
+/// Infinite
+const flArr2 = [1, 2, 3, [4, 5, 6, [40, 41, 42, [80, 90, 100, [500, 600]]]]];
+// console.log('flArr->', flArr);
+let oneInFlArr2 = flArr2.flat(Infinity);
+console.log('oneInFlArr2->', oneInFlArr2);
