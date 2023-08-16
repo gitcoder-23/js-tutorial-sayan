@@ -119,11 +119,11 @@ const flArr2 = [1, 2, 3, [4, 5, 6, 7, 8, [40, 41, 42]]];
 let oneFlArr2 = flArr2.flat(1);
 console.log('oneFlArr2->', oneFlArr2);
 
-// /// Infinite jokhn ekta array te infinite array thake tokhn flat method e 
-// const flArr2 = [1, 2, 3, [4, 5, 6, [40, 41, 42, [80, 90, 100, [500, 600]]]]];
-// // console.log('flArr->', flArr);
-// let oneInFlArr2 = flArr2.flat(Infinity);
-// console.log('oneInFlArr2->', oneInFlArr2);
+/// Infinite jokhn ekta array te infinite array thake tokhn flat method e bhetore infinity likhte hy
+const flArr3 = [1, 2, 3, [4, 5, 6, [40, 41, 42, [80, 90, 100, [500, 600,[1000,5000]]]]]];
+// console.log('flArr->', flArr);
+let oneInFlArr3 = flArr3.flat(Infinity);
+console.log('oneInFlArr3->', oneInFlArr3);
 
 // // Array Join()
 // const cssClasses = ['btn', 'btn-primary', 'btn-active'];
@@ -137,7 +137,12 @@ console.log('oneFlArr2->', oneFlArr2);
 // console.log('nameArrJoin->', nameArrJoin);
 
 // // remove " "/ "-" add "_"
-// const title = 'JavaScrip-array-join-example';
+ const title = 'JavaScrip-Python-Java-Php';
+const reData1 = title.split('-');
+console.log('reData1->', reData1);
+const reData2 = reData1.join('*');
+console.log('reData2->',reData2);
+
 // const reData = title.split('-');
 // console.log('reData->', reData);
 // let joinedData = reData.join('_');
