@@ -99,27 +99,27 @@ let sortDecremented1 = mapPly.sort
 
 //saturday study
 // Concat old
-const nArray1 = [1, 2, 3, 4];
+const nArray1 = [1, 2, 3, 4,5,6];
 const nArray2 = [41, 42];
-const nArray3 = [50, 60];
+const nArray3 = [50, 60,78];
 
 let concatArray = nArray1.concat(nArray2).concat(nArray3);
 console.log('concatArray->', concatArray);
 
-// // flat
-// const flArr = [1, 2, 3, [4, 5, 6]];
+// flat eta use hy array er moddhe array thakle setake ekta array convert krte use hy
+const flArr1 = [1, 2, 3, [4, 5, 6,7,8]];
 
-// // console.log('flArr->', flArr);
-// let oneFlArr = flArr.flat();
-// console.log('oneFlArr->', oneFlArr);
+// console.log('flArr->', flArr);
+let oneFlArr1 = flArr1.flat();
+console.log('oneFlArr1->', oneFlArr1);
 
-// /// Customize
-// const flArr1 = [1, 2, 3, [4, 5, 6, [40, 41, 42]]];
-// // console.log('flArr->', flArr);
-// let oneFlArr1 = flArr1.flat(1);
-// console.log('oneFlArr1->', oneFlArr1);
+/// Customize of flat method ekhane 119 no line flat er 1 lekha mne eta ek number depth tai 1 theke 6 obdhi print hbe ekta array te
+const flArr2 = [1, 2, 3, [4, 5, 6, 7, 8, [40, 41, 42]]];
+// console.log('flArr->', flArr);
+let oneFlArr2 = flArr2.flat(1);
+console.log('oneFlArr2->', oneFlArr2);
 
-// /// Infinite
+// /// Infinite jokhn ekta array te infinite array thake tokhn flat method e 
 // const flArr2 = [1, 2, 3, [4, 5, 6, [40, 41, 42, [80, 90, 100, [500, 600]]]]];
 // // console.log('flArr->', flArr);
 // let oneInFlArr2 = flArr2.flat(Infinity);
