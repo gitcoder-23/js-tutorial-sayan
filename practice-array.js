@@ -177,3 +177,43 @@ function getProfile() {
 }
 let [name,surname,[color1,color2,color3]]=getProfile();
 console.log('deStruc->',color2)
+
+//search string methods
+//egulo sb case sensitive search 
+// it returns 3 // eta str er moddhe check krbe first capital letter koto number index ache
+//tai ekhane Capital T 3 no index e ache tai eta 3 return krbe ekhane - 1 asle bujhte hbe kono capital number nei
+let re = /[A-Z]/;
+let str = 'hi There! How are you?';
+let index = str.search(re);
+
+console.log('1st capital index position->',index);
+
+//index of method
+// eta return krbe 1 karon str1 er moddhe check krbe "in" er i er index koto mane orthat first
+//word er index position 
+let str1 = 'finding substring in string';
+let inDex1 = str1.indexOf('in');
+
+console.log(inDex1);
+
+//JavaScript String lastIndexOf()
+//eta check krbe last Capital J er last e koto index e ache
+let lastIndstr = 'JavaScriptJ';
+let lastIndstrvar = lastIndstr.lastIndexOf('J');
+
+console.log(lastIndstrvar);
+
+//JavaScript String includes() method
+//eta check kre string er moddhe substring ache kina r boolean value return krbe
+let inClude = 'JavaScript String';
+console.log(inClude.includes('Script'));
+
+//JavaScript String startsWith() examples
+//ekhane check krlo jill er j ta 9 no. index ache kina
+const subJect = 'Jack and Jill Went Up the Hill';
+console.log(subJect.startsWith('Jill',9));
+
+//JavaScript String endsWith()() examples
+//The following example uses the endsWith() method to check if the title ends with the string 'Hill':
+const subJect1 = 'Jack and Jill Went Up the Hill';
+console.log(subJect1.endsWith('Hill',21));
