@@ -143,10 +143,10 @@ console.log('reData1->', reData1);
 const reData2 = reData1.join('*');
 console.log('reData2->',reData2);
 
-// const reData = title.split('-');
-// console.log('reData->', reData);
-// let joinedData = reData.join('_');
-// console.log('joinedData->', joinedData);
+const reData = title.split('-');
+console.log('reData->', reData);
+let joinedData = reData.join('_');
+console.log('joinedData->', joinedData);
 
 // // remove " "/ "-" add "_"
 // const title1 = 'JavaScript-array-join-example';
@@ -162,6 +162,18 @@ console.log('reData2->',reData2);
 //   return x, y;
 // }
 
+
 // let { x, y } = desFun();
 // console.log('desData->', y);
 // console.log('joinedData->', joinedData);
+
+
+function getProfile() {
+  return [
+      'John',
+      'Doe',
+      ['Red', 'Green', 'Blue']
+  ];
+}
+let [name,surname,[color1,color2,color3]]=getProfile();
+console.log('deStruc->',color2)
