@@ -119,11 +119,11 @@ const flArr2 = [1, 2, 3, [4, 5, 6, 7, 8, [40, 41, 42]]];
 let oneFlArr2 = flArr2.flat(1);
 console.log('oneFlArr2->', oneFlArr2);
 
-// /// Infinite jokhn ekta array te infinite array thake tokhn flat method e 
-// const flArr2 = [1, 2, 3, [4, 5, 6, [40, 41, 42, [80, 90, 100, [500, 600]]]]];
-// // console.log('flArr->', flArr);
-// let oneInFlArr2 = flArr2.flat(Infinity);
-// console.log('oneInFlArr2->', oneInFlArr2);
+/// Infinite jokhn ekta array te infinite array thake tokhn flat method e bhetore infinity likhte hy
+const flArr3 = [1, 2, 3, [4, 5, 6, [40, 41, 42, [80, 90, 100, [500, 600,[1000,5000]]]]]];
+// console.log('flArr->', flArr);
+let oneInFlArr3 = flArr3.flat(Infinity);
+console.log('oneInFlArr3->', oneInFlArr3);
 
 // // Array Join()
 // const cssClasses = ['btn', 'btn-primary', 'btn-active'];
@@ -137,11 +137,16 @@ console.log('oneFlArr2->', oneFlArr2);
 // console.log('nameArrJoin->', nameArrJoin);
 
 // // remove " "/ "-" add "_"
-// const title = 'JavaScrip-array-join-example';
-// const reData = title.split('-');
-// console.log('reData->', reData);
-// let joinedData = reData.join('_');
-// console.log('joinedData->', joinedData);
+ const title = 'JavaScrip-Python-Java-Php';
+const reData1 = title.split('-');
+console.log('reData1->', reData1);
+const reData2 = reData1.join('*');
+console.log('reData2->',reData2);
+
+const reData = title.split('-');
+console.log('reData->', reData);
+let joinedData = reData.join('_');
+console.log('joinedData->', joinedData);
 
 // // remove " "/ "-" add "_"
 // const title1 = 'JavaScript-array-join-example';
@@ -157,6 +162,58 @@ console.log('oneFlArr2->', oneFlArr2);
 //   return x, y;
 // }
 
+
 // let { x, y } = desFun();
 // console.log('desData->', y);
 // console.log('joinedData->', joinedData);
+
+
+function getProfile() {
+  return [
+      'John',
+      'Doe',
+      ['Red', 'Green', 'Blue']
+  ];
+}
+let [name,surname,[color1,color2,color3]]=getProfile();
+console.log('deStruc->',color2)
+
+//search string methods
+//egulo sb case sensitive search 
+// it returns 3 // eta str er moddhe check krbe first capital letter koto number index ache
+//tai ekhane Capital T 3 no index e ache tai eta 3 return krbe ekhane - 1 asle bujhte hbe kono capital number nei
+let re = /[A-Z]/;
+let str = 'hi There! How are you?';
+let index = str.search(re);
+
+console.log('1st capital index position->',index);
+
+//index of method
+// eta return krbe 1 karon str1 er moddhe check krbe "in" er i er index koto mane orthat first
+//word er index position 
+let str1 = 'finding substring in string';
+let inDex1 = str1.indexOf('in');
+
+console.log(inDex1);
+
+//JavaScript String lastIndexOf()
+//eta check krbe last Capital J er last e koto index e ache
+let lastIndstr = 'JavaScriptJ';
+let lastIndstrvar = lastIndstr.lastIndexOf('J');
+
+console.log(lastIndstrvar);
+
+//JavaScript String includes() method
+//eta check kre string er moddhe substring ache kina r boolean value return krbe
+let inClude = 'JavaScript String';
+console.log(inClude.includes('Script'));
+
+//JavaScript String startsWith() examples
+//ekhane check krlo jill er j ta 9 no. index ache kina
+const subJect = 'Jack and Jill Went Up the Hill';
+console.log(subJect.startsWith('Jill',9));
+
+//JavaScript String endsWith()() examples
+//The following example uses the endsWith() method to check if the title ends with the string 'Hill':
+const subJect1 = 'Jack and Jill Went Up the Hill';
+console.log(subJect1.endsWith('Hill',21));
