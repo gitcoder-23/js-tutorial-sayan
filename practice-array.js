@@ -217,3 +217,26 @@ console.log(subJect.startsWith('Jill',9));
 //The following example uses the endsWith() method to check if the title ends with the string 'Hill':
 const subJect1 = 'Jack and Jill Went Up the Hill';
 console.log(subJect1.endsWith('Hill',21));
+
+// Number to string convert toString method diye 
+let numData1 = 75;
+console.log('numData1->', typeof numData1);
+let numToString1 = numData1.toString();
+console.log('numToString1->', typeof numToString1, numToString1);
+
+// String to number convet parseInt() method diye
+let strData1 = '524';
+console.log('strData1->', typeof strData1);
+let strToNum1 = parseInt(strData1);
+console.log('strToNum1->', typeof strToNum1, strToNum1);
+
+//slice(start, end) ei slice amra string kotota thke starting e nbo r kotota obdhi nbo seta set krte prbo 
+//bracket moddhe tr index diye
+let describe1 = 'In this tutorial, you’ll learn how to use the JavaScript';
+let sliceStringData1 = describe1.slice(2, 40);
+console.log('sliceStringData1->', sliceStringData1);
+
+// Concat
+const newStr = 'hello';
+const concatData = newStr.concat(' ', 'Sam');
+console.log('concatData>', concatData);
