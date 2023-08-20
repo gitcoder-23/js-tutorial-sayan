@@ -1,9 +1,82 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Form Validation</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    />
+
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
   <body>
-    <h1 id="js" class="hi">Javascript</h1>
+    <h1 id="js" class="js_validation">Javascript Form Validation</h1>
+
+    <div class="container mt-4 pt-4">
+      <form
+        name="user_form"
+        id="user_form"
+        class="form_class"
+        onsubmit="return validSubmit()"
+      >
+        <div class="row">
+          <div class="col-12">
+            <div class=""><label>Username</label></div>
+
+            <input
+              type="text"
+              name="user_name"
+              id="user_name"
+              value=""
+              placeholder="Type user name"
+            />
+            <span id="user_err" style="color: brown"></span>
+
+            <div class=""><label>First Name</label></div>
+            <input
+              type="text"
+              name="f_name"
+              id="f_name"
+              value=""
+              placeholder="Type first name"
+            />
+            <span id="fname_err" style="color: brown"></span>
+
+            <div class="col-md-12 mt-4">
+              <div>
+                <label>Gender</label>
+              </div>
+              Male
+              <input type="radio" name="gender" id="gender" value="male" />
+              Female
+              <input type="radio" name="gender" id="gender" value="female" />
+              Others
+              <input type="radio" name="gender" id="gender" value="others" />
+            </div>
+            <span id="gender_err" style="color: brown"></span>
+
+            <div class="mt-4">
+              <button type="submit">Save</button>
+            </div>
+          </div>
+        </div>
+        <!-- <input type="submit" value="Save" /> -->
+      </form>
+    </div>
   </body>
-  <script src="./index.js"></script>
-  <script src="./jsarray.js"></script>
-  <script src="./practice-array.js"></script>
-  <script src="./jsString.js"></script>
+  <!-- <script src="./index.js"></script> -->
+  <!-- <script src="./jsarray.js"></script> -->
+  <!-- <script src="./practice-array.js"></script>
+  <script src="./jsString.js"></script> -->
+  <script src="./jsvalidation.js"></script>
 </html>
