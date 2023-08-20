@@ -1,3 +1,11 @@
+// Async
+console.log('A');
+setTimeout(() => {
+  console.log('B');
+}, 100);
+
+console.log('C');
+
 // Array
 let array1 = ['1', '2', '3', '4', 2, 3];
 
