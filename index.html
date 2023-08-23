@@ -64,7 +64,59 @@
               <input type="radio" name="gender" id="gender" value="others" />
             </div>
             <span id="gender_err" style="color: brown"></span>
+            <div class=""><label>Email</label></div>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              value=""
+              placeholder="Type Email"
+            />
+            <span id="email_err" style="color: brown"></span>
+            <div class=""><label>Phone Number:</label></div>
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              value=""
+              placeholder="Type Phone"
+            />
+            <span id="phone_err" style="color: brown"></span>
 
+            <div class=""><label>Password :</label></div>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              value=""
+              placeholder="Type password"
+            />
+            <span id="pass_err" style="color: brown"></span>
+
+            <div class=""><label>Confirm Password :</label></div>
+            <input
+              type="password"
+              name="confirm_password"
+              id="confirm_password"
+              value=""
+              placeholder="Type Confirm Password"
+            />
+            <span id="cnfpass_err" style="color: brown"></span>
+
+            <div class=""><label>Select Course :</label></div>
+            <select id="course" name="course">
+              <option value="">Please select a course</option>
+              <option value="math">Math</option>
+              <option value="science">Science</option>
+              <option value="history">History</option>
+              <option value="language">Language</option>
+          </select>
+          <span id="course_err" style="color: brown"></span>
+          <br><br>
+          <div class=""><label>Profile Picture :</label></div>
+          <input type="file" id="profile_picture" name="profile_picture">
+          <span id="profilepic_err" style="color: brown"></span>
+          <br><br>
             <div class="mt-4">
               <button type="submit">Save</button>
             </div>
