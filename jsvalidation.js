@@ -31,6 +31,9 @@ function validSubmit(e) {
    var fileInput = document.getElementById("profile_picture");
       //console.log('fileInput->', fileInput);
 
+   const atIndex = emailValue.indexOf('@');
+   const dotIndex = emailValue.lastIndexOf('.');   
+
 
 
 
@@ -43,12 +46,51 @@ function validSubmit(e) {
   } else {
     document.getElementById('user_err').innerHTML = '';
   }
+  if(userName.length <= 2 || userName.length > 25){
+    document.getElementById('user_err').innerHTML = 'Username must be between 2 and 25';
+    setTimeout(() => {
+      document.getElementById('user_err').innerHTML = '';
+    }, 2000);
+    return false;
+  } else {
+    document.getElementById('user_err').innerHTML = '';
+  }
+  
+  if(!isNaN(userName)){
+    document.getElementById('user_err').innerHTML = 'Please Type Alphabets';
+    setTimeout(() => {
+      document.getElementById('user_err').innerHTML = '';
+    }, 2000);
+    return false;
+  } else {
+    document.getElementById('user_err').innerHTML = '';
+  }
 
   if (fName == '') {
     document.getElementById('fname_err').innerHTML = 'Please add first name';
     setTimeout(() => {
       document.getElementById('fname_err').innerHTML = '';
     }, 1000);
+    return false;
+  } else {
+    document.getElementById('fname_err').innerHTML = '';
+  }
+
+  if(fName.length<=2 || fName.length>25){
+    document.getElementById('fname_err').innerHTML = 'First Name must be between 2 and 25';
+    setTimeout(() => {
+      document.getElementById('fname_err').innerHTML = '';
+    }, 2000);
+    return false;
+  } else {
+    document.getElementById('fname_err').innerHTML = '';
+  }
+
+  if(!isNaN(fName)){
+    document.getElementById('fname_err').innerHTML = 'Please Type Alphabets';
+    setTimeout(() => {
+      document.getElementById('fname_err').innerHTML = '';
+    }, 2000);
     return false;
   } else {
     document.getElementById('fname_err').innerHTML = '';
@@ -74,6 +116,17 @@ function validSubmit(e) {
     document.getElementById('email_err').innerHTML = '';
   }
 
+  
+  if (atIndex <= 0 || dotIndex <= atIndex || dotIndex === email.length - 1) {
+    document.getElementById('email_err').innerHTML = 'Please Type Right Email ID';
+    setTimeout(() => {
+      document.getElementById('email_err').innerHTML = '';
+    }, 1000);
+    return false;
+  } else {
+    document.getElementById('email_err').innerHTML = '';
+  }
+
   if (phnValue == '') {
     document.getElementById('phone_err').innerHTML = 'Please add Phone Number';
     setTimeout(() => {
@@ -83,6 +136,27 @@ function validSubmit(e) {
   } else {
     document.getElementById('phone_err').innerHTML = '';
   }
+
+  if(isNaN(phnValue)){
+    document.getElementById('phone_err').innerHTML = 'Please Type Number';
+    setTimeout(() => {
+      document.getElementById('phone_err').innerHTML = '';
+    }, 2000);
+    return false;
+  } else {
+    document.getElementById('phone_err').innerHTML = '';
+  } 
+  
+  if(phnValue.length !=10){
+    document.getElementById('phone_err').innerHTML = 'Phone Number Must Be 10 digit';
+    setTimeout(() => {
+      document.getElementById('phone_err').innerHTML = '';
+    }, 2000);
+    return false;
+  } else {
+    document.getElementById('phone_err').innerHTML = '';
+  }
+
 
   if (passValue == '') {
     document.getElementById('pass_err').innerHTML = 'Please add Password';
@@ -94,8 +168,28 @@ function validSubmit(e) {
     document.getElementById('pass_err').innerHTML = '';
   }
 
+  if(passValue.length<=5 || passValue.length>15){
+    document.getElementById('pass_err').innerHTML = 'Password must be between 5 and 15';
+    setTimeout(() => {
+      document.getElementById('pass_err').innerHTML = '';
+    }, 2000);
+    return false;
+  } else {
+    document.getElementById('pass_err').innerHTML = '';
+  }
+
   if (cnfpassValue == '') {
     document.getElementById('cnfpass_err').innerHTML = 'Please Retype Your Password';
+    setTimeout(() => {
+      document.getElementById('cnfpass_err').innerHTML = '';
+    }, 1000);
+    return false;
+  } else {
+    document.getElementById('cnfpass_err').innerHTML = '';
+  }
+
+  if (passValue != cnfpassValue) {
+    document.getElementById('cnfpass_err').innerHTML = 'Password should be same not matching';
     setTimeout(() => {
       document.getElementById('cnfpass_err').innerHTML = '';
     }, 1000);
